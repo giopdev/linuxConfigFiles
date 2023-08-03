@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+PS1='[\u\W]\$ '
 
 # Color grep output
 alias grep='grep --color=auto'
@@ -24,6 +24,11 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias df='df -h'
 alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# Git stuff
+alias gs='git status'
 
 source /etc/profile.d/autojump.sh
 
@@ -32,3 +37,5 @@ source /etc/profile.d/autojump.sh
 if [ -f /home/gio/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
 	source /home/gio/.config/synth-shell/synth-shell-prompt.sh
 fi
+
+export HISTCONTROL=ignoreboth
