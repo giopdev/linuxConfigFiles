@@ -16,7 +16,8 @@ alias ll='exa --long --header --color=auto'
 alias la='exa --long -d --header .*'
 alias lsa='exa --long --header -a --color=auto'
 alias lr='exa --recurse --long --header --color=auto'
-
+# Change cat to bat, superior cat clone that makes everything look better.
+alias cat='bat'
 # Other stuff
 alias ..='cd ..'
 alias .3='cd ../../..'
