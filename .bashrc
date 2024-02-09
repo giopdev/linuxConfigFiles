@@ -27,7 +27,8 @@ alias df='df -h'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-
+# Change vim -> nvim
+alias vim='nvim'
 # Git stuff
 alias gs='git status'
 
