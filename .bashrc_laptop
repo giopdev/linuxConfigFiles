@@ -1,0 +1,67 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+PS1='[\u\W]\$ '
+
+# Color grep output
+alias grep='grep --color=auto'
+
+# Change ls to "exa" a commandline tool that provides a modern alternative to ls with colors
+alias ls='exa --color=auto'
+alias ll='exa --icons --long --header --color=auto'
+alias la='exa --icons --long -d --header .*'
+alias lsa='exa --icons --long --header -a --color=auto'
+alias lr='exa --icons --recurse --long --header --color=auto'
+# Change cat to bat, superior cat clone that makes everything look better.
+alias cat='bat'
+# Other stuff
+alias ..='cd ..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias df='df -h'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+# Change vim -> nvim
+alias vim='nvim'
+# Git stuff
+alias gs='git status'
+
+source /etc/profile.d/autojump.sh
+
+##-----------------------------------------------------
+## synth-shell-prompt.sh
+if [ -f /home/gio/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/gio/.config/synth-shell/synth-shell-prompt.sh
+fi
+
+export HISTCONTROL=ignoreboth
+
+neofetch
+#### ------------------------------
+
+#### exa - Color Scheme Definitions
+
+#### ------------------------------
+
+export EXA_COLORS="\
+uu=36:\
+gu=37:\
+sn=32:\
+sb=32:\
+da=34:\
+ur=34:\
+uw=35:\
+ux=36:\
+ue=36:\
+gr=34:\
+gw=35:\
+gx=36:\
+tr=34:\
+tw=35:\
+tx=36:"
