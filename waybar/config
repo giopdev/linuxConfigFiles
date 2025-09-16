@@ -6,9 +6,9 @@
     "margin-bottom": 0,
     "margin-left": 0,
     "margin-right": 0,
-    "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/playerctl", "custom/playerlabel"],
+    "modules-left": ["hyprland/workspaces", "custom/playerctl", "custom/playerlabel"],
     "modules-center": ["cpu", "memory", "disk"],
-    "modules-right": ["tray", "custom/randwall", "network", "pulseaudio", "clock"],
+    "modules-right": ["tray", "custom/randwall", "network", "pulseaudio", "battery", "clock"],
     // Modules configuration
 	"clock": {
 		"format": " {:%H:%M}",
@@ -48,8 +48,8 @@
       "on-click": "playerctl previous",
       "on-click-right": "playerctl next",
       "format-icons": {
-        "Playing": "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>",
-        "Paused": "<span foreground='#928374'>󰒮 󰏥 󰒭</span>"
+        "Playing": "<span foreground='#80aed1'>󰒮 󰐌 󰒭</span>",
+        "Paused": "<span foreground='#626f78'>󰒮 󰏥 󰒭</span>"
       },
     },
 
@@ -139,14 +139,14 @@
   "custom/randwall": {
     "format": "󰏘",
     "on-click": "bash $HOME/.config/hypr/randwall.sh",
-    "on-click-right": "bash $HOME/.config/hypr/wall.sh"
+    "on-click-right": "bash $HOME/.config/hypr/randwall_gif.sh"
   },
   "custom/launcher": {
-    "format": "󰈸",
-    "on-click": "rofi -show drun",
-//    "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
-    "on-click-right": "bash $HOME/.config/rofi/run.sh"  
-//    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"  
+    "format": "🌫",
+    "on-click": "wofi --show drun -I -n -W 500 -H 376 -s ~/.config/wofi/themes/yoink.cs",
+//    "on-click": "wofi --show drun -I -n -W 500 -H 376 -s ~/.config/wofi/themes/yoink.cs",
+    "on-click-right": "wofi --show drun -I -n -W 500 -H 376 -s ~/.config/wofi/themes/yoink.cs"  
+//    "on-click-right": "wofi --show drun -I -n -W 500 -H 376 -s ~/.config/wofi/themes/yoink.cs"  
   },
 
   "custom/wf-recorder": {

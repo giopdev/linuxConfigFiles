@@ -12,12 +12,12 @@ alias grep='grep --color=auto'
 
 # Change ls to "exa" a commandline tool that provides a modern alternative to ls with colors
 alias ls='exa --color=auto'
-alias ll='exa --long --header --color=auto'
-alias la='exa --long -d --header .*'
-alias lsa='exa --long --header -a --color=auto'
-alias lr='exa --recurse --long --header --color=auto'
-# Change cat to bat, superior cat clone that makes everything look better.
-alias cat='bat'
+alias ll='exa --icons --long --header --color=auto'
+alias la='exa --icons --long -d --header .*'
+alias lsa='exa --icons --long --header -a --color=auto'
+alias lr='exa --icons --recurse --long --header --color=auto'
+# catl to bat, superior cat clone that makes everything look better.
+alias catl='bat'
 # Other stuff
 alias ..='cd ..'
 alias .3='cd ../../..'
@@ -31,6 +31,8 @@ alias rm='rm -i'
 alias vim='nvim'
 # Git stuff
 alias gs='git status'
+# output the last clipboard image to a file
+alias pasteimage='wl-paste --type image/png >'
 
 source /etc/profile.d/autojump.sh
 
@@ -41,3 +43,27 @@ if [ -f /home/gio/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $
 fi
 
 export HISTCONTROL=ignoreboth
+
+neofetch
+#### ------------------------------
+
+#### exa - Color Scheme Definitions
+
+#### ------------------------------
+
+export EXA_COLORS="\
+uu=36:\
+gu=37:\
+sn=32:\
+sb=32:\
+da=34:\
+ur=34:\
+uw=35:\
+ux=36:\
+ue=36:\
+gr=34:\
+gw=35:\
+gx=36:\
+tr=34:\
+tw=35:\
+tx=36:"
